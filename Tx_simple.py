@@ -6,7 +6,7 @@ from scapy.layers.dot11 import Dot11, LLC, RadioTap, Dot11Beacon, Dot11Elt, Dot1
 from scapy.layers.inet import UDP
 from scapy.packet import Raw
 from scapy.utils import hexdump, checksum
-from datos import *
+#from datos import *
 import pickle5 as pickle
 from funcionesLimpias import *
 
@@ -25,23 +25,17 @@ key = b'\x01\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a'
 
 def PacketHandler():
 	print("Forma seleccionada: ",forma)
-	if int(forma) == 1:
-		AMPDU, AMPDUint = cifrarNORMAL(key)
-		packet = []
-		qoscontrol=b'\x00\x00'
-		packet.append(RadioTap(present='Rate',Rate=int(rates)) / Dot11(type=2, subtype=8, addr1=AP_MAC_2, addr2=AP_MAC,
-		addr3=AP_MAC)/qoscontrol/AMPDU)
-		sendp(packet, iface=IFACE, verbose=False)
 	if int(forma) == 2:
 		packet = []
+		print ("holaforma2")
 		qoscontrol = b'\x00\x00'
-		Hdr, mpduCi_Hex, mpduCi, ps, xs = cifrarCRT()
+		Hdr, mpduCi_Hex, mpduCi, ps, xs = cifrarCRTlimpia()
 		print(hexdump(mpduCi_Hex))
 		packet.append(RadioTap(present='Rate',Rate=int(rates)) / Dot11(type=2, subtype=8, addr1=AP_MAC_2, addr2=AP_MAC,
 		addr3=AP_MAC) / qoscontrol / mpduCi_Hex)
 		sendp(packet, iface=IFACE, verbose=False)
 	if int(forma) == 3:
-		calc_primos(3,128)
+		calcPRIMOS(3,128)
 
 
 #Almacenamos el valor de la velocidad de transmision que se ha elegido

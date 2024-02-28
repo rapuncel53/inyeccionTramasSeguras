@@ -4,10 +4,11 @@ import sys
 import scapy.all as scapy
 from scapy.layers.dot11 import Dot11, RadioTap, Dot11Elt, Dot11EltHTCapabilities, Dot11AssoReq
 from scapy.sendrecv import sendp
-from Generatramas import *
-from Criptotramas import *
-from datos import *
-
+#from Generatramas import *
+#from Criptotramas import *
+#from datos import *
+from funcionesLimpias import *
+ 
 ap_list = []
 IFACE2 = 'wlx00c0caa4737b'
 AP_MAC_2 = '00:c0:ca:a4:73:7b'#mac rx
@@ -60,7 +61,7 @@ def PacketHandler(pkt):
                 descifrado = MSDU[0].to_bytes((MSDU[0].bit_length() + 7) // 8, byteorder='big')
                 print("AMSDU DESCIFRADO", descifrado)
             if int(forma) == 2:
-                MSDUs = AMSDU_dec(Hdr, intAMPDUfinal, ps, xs)
+                MSDUs = AMSDU_dec_limpia(Hdr, intAMPDUfinal, ps, xs)
                 print (MSDUs)
                 print ("forma2")
                 #nuevo=MSDUs.to_bytes((MSDUs.bit_length() + 7) // 8, byteorder='big')
