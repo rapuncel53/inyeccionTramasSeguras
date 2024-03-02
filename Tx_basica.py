@@ -8,7 +8,7 @@ from scapy.packet import Raw
 from scapy.utils import hexdump, checksum
 #from datos import *
 import pickle5 as pickle
-from funcionesSimple import *
+from funcionesbasica import *
 
 ap_list = []                                #Lista de indices para controlar que paquetes nos han llegado
 IFACE = 'wlx00c0caa81a35'                   #Interfaz de la targeta de red del transmisor
@@ -29,10 +29,10 @@ def PacketHandler():
 		packet = []
 		print ("holaforma2")
 		qoscontrol = b'\x00\x00'
-		Hdr, mpduCi_Hex, mpduCi, ps, xs = cifrarCRTlimpia()
-		print(hexdump(mpduCi_Hex))
+		Hdr, mpduCi, ps, xs = cifrarCRTbasica(int(numdatip),int(tamdatip))#tiene que leer paquetes eth de un fichero e ir enviandolos
+		print(hexdump(mpduCi))
 		packet.append(RadioTap(present='Rate',Rate=int(rates)) / Dot11(type=2, subtype=8, addr1=AP_MAC_2, addr2=AP_MAC,
-		addr3=AP_MAC) / qoscontrol / mpduCi_Hex)
+		addr3=AP_MAC) / qoscontrol / mpduCi)
 		sendp(packet, iface=IFACE, verbose=False)
 	if int(forma) == 3:
 		calcPRIMOS(3,128)
@@ -41,4 +41,6 @@ def PacketHandler():
 #Almacenamos el valor de la velocidad de transmision que se ha elegido
 rates=sys.argv[1]
 forma=sys.argv[2]
+numdatip=sys.argv[3]	#numero de datagramas IP
+tamdatip=sys.argv[4]	#tamaño de los datagramas IP
 PacketHandler()

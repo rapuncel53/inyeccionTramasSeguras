@@ -7,7 +7,7 @@ from scapy.sendrecv import sendp
 #from Generatramas import *
 #from Criptotramas import *
 #from datos import *
-from funcionesSimple import *
+from funcionesbasica import *
  
 ap_list = []
 IFACE2 = 'wlx00c0caa4737b'
