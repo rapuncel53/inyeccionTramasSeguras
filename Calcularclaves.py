@@ -14,7 +14,7 @@ def calcPRIMOS(num,long):
     Hdr = random.getrandbits(2047)  # Cabecera común para el cifrado aleatorio
     m=2**(long*8)
     for i in list(range(num)):
-        #print ("Entro en el bucle con m=",m)
+        #gitprint ("Entro en el bucle con m=",m)
         pnew = nextprime(m + 3)  # Calculo la clave p
         #print ("sigo en el bucle con i=",i)
         m=pnew
