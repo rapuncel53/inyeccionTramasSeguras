@@ -49,7 +49,7 @@ def colocarcabeceras(paquetes_ordenados):
         # print(paquetes_ordenados[mac][:3])
         
         if (len(paquete)-t1)<=0:
-            paquetes_cabeceras[mac].append((b'\x80')+struct.pack('!H', t1)+ paquetes_ordenados[mac])
+            paquetes_cabeceras[mac].append((b'\x80')+struct.pack('!H', 0)+ paquetes_ordenados[mac])
         elif (len(paquete)-t1)<t1:
             paquetes_cabeceras[mac].append((b'\x80')+struct.pack('!H', t1)+ paquetes_ordenados[mac][:t1])
             paquetes_cabeceras[mac].append((b'\x80')+struct.pack('!H',0) + paquetes_ordenados[mac][t1:])

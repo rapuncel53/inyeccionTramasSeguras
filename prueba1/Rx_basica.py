@@ -68,13 +68,19 @@ def PacketHandler(pkt):
                 print (MSDUs)
                 print ("forma2")
                 #nuevo=MSDUs.to_bytes((MSDUs.bit_length() + 7) // 8, byteorder='big')
+                paquetes_recibidos = []
                 for i in MSDUs:
-                    print(hexdump(i.to_bytes((i.bit_length() + 7) // 8, byteorder='big')))
+                    x=i.to_bytes((i.bit_length() + 7) // 8, byteorder='big')
+                    print(hexdump(x))
+                    print("rrrrr")
+                return(MSDUs)
             #exit()
             print("SALIMOS")
+            
             #MSDU, lapso = AMPDU_dec(int.from_bytes(ver, byteorder='big'), key)
 
 # rate = sys.argv[1]
 # forma= sys.argv[2]
 
 scapy.sniff(iface=IFACE2, prn=PacketHandler, timeout=30000)
+ 
