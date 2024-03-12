@@ -134,8 +134,9 @@ def AMSDU_enc(AMSDU,
     filtro2 = (1 << 16) - 1
     tiempo_inicial = datetime.now()
     m = 2
+    print (MSDU)
     for i in MSDU:
-        # print("MSDU ANTES DE ENCRIPTAR",i)
+        print("MSDU ANTES DE ENCRIPTAR",i)
         
         a.append((i + pow(Hdr, xs[n], ps[n])) % ps[n])  # y enmascaro el MSDU
         n = n + 1

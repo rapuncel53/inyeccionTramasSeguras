@@ -10,6 +10,7 @@ from scapy.utils import hexdump, checksum
 import pickle5 as pickle
 from funcionesSimple import *
 
+
 ap_list = []                                #Lista de indices para controlar que paquetes nos han llegado
 IFACE = 'wlx00c0caa81a35'                   #Interfaz de la targeta de red del transmisor
 AP_MAC = '00:c0:ca:a8:1a:35'               #Direccion mac del transmisor

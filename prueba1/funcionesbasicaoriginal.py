@@ -48,7 +48,7 @@ def cifrarCRTbasica(paquete, ps, xs, Hdr):  # Funcion para el calculo de las sim
     #     print("MSDU:",i+1, MSDUs[i])
     #     print(hexdump(MSDUs[i].to_bytes((MSDUs[i].bit_length() + 7) // 8, byteorder='big')))
     print(paquete)
-    print(paquete.type())
+    #print(paquete.type())
     (Hdr, mpduCi, ps, xs) = AMSDU_enc(paquete, ps, xs, Hdr) #para mas adelante, añadir las claves como parametros de entrada y quitarlos de la salida
     
     # print("Para transmitir",mpduCi)
@@ -100,8 +100,9 @@ def AMSDU_enc(MSDU,ps,xs,Hdr):  # Función que cifra un AMSDU con el teorema chi
     tiempo_inicial = datetime.now()
     for i in MSDU:
         # print("MSDU ANTES DE ENCRIPTAR",i)
-        
-        a.append((i + pow(Hdr, xs[n], ps[n])) % ps[n])  # y enmascaro el MSDU
+        print("i=",i)
+        x = int.from_bytes(i, byteorder='big')
+        a.append((x + pow(Hdr, xs[n], ps[n])) % ps[n])  # y enmascaro el MSDU
         n = n + 1
         
         
