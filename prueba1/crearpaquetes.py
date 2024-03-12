@@ -5,8 +5,12 @@ def CrearPaquetes():
     ethernet_packets = []
     dst_mac = ["11:11:11:11:11:11", "11:11:11:11:11:11", "11:11:11:11:11:11", "22:22:22:22:22:22", "22:22:22:22:22:22"]
     src_mac = ["00:00:00:00:00:00", "00:00:00:00:00:00", "00:00:00:00:00:00", "00:00:00:00:00:00", "00:00:00:00:00:00"]
-    payloads = [IP(dst="8.8.8.8")/ ICMP(), IP(dst="7.7.7.7")/ ICMP(), IP(dst="6.6.6.6")/ ICMP()/b'\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11',
-                IP(dst="5.5.5.5") , IP(dst="4.4.4.4") ]
+    payloads = [IP(dst="8.8.8.8")/ ICMP(), IP(dst="7.7.7.7")/ ICMP(), IP(dst="6.6.6.6")/ ICMP()/b'\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11\x11',IP(dst="5.5.5.5") , IP(dst="4.4.4.4") ]
+    #dst_mac = ["11:11:11:11:11:11"]
+    #src_mac = ["00:00:00:00:00:00"]
+   
+    # payloads = [b'\x11'] 
+                
 
     # Verificar que las listas tengan la misma longitud
     if len(dst_mac) != len(src_mac) or len(dst_mac) != len(payloads):
