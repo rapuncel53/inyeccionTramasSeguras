@@ -24,3 +24,4 @@ paquetes_ordenados = ordenarpaquetes(paquetes)
 # paquetes_a_cifrar = paquetesacifrar(paquetes_con_cabeceras)
 # print("Paquetes a cifrar:")
 # print(paquetes_a_cifrar)
+
