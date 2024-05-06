@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from pickle5 import pickle
+#from pickle5 import pickle
 import math
 import random
 #import binascii
@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 from scapy.utils import hexdump
 from datetime import datetime, timedelta
 from random import getrandbits
-from Crypto.Cipher import  AES
+#from Crypto.Cipher import  AES
 from sympy import *
 
 # This Python file uses the following encoding: utf-8

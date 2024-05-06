@@ -7,7 +7,7 @@ from scapy.layers.dot11 import Dot11, LLC, RadioTap, Dot11Beacon, Dot11Elt, Dot1
 from scapy.layers.inet import UDP
 from scapy.packet import Raw
 from scapy.utils import hexdump, checksum
-import pickle5 as pickle
+#import pickle5 as pickle
 from a_generarFicheroPaquetes import leer_datos_paquetes
 from b_ordenarpaquetes import ordenarpaquetes
 from c_colocarCabeceras import colocarcabeceras
@@ -50,6 +50,10 @@ for paquetes in eth_paquetes:
     ord_paquetes = ordenarpaquetes(paquetes)
     cab_paquetes = colocarcabeceras(ord_paquetes)
     cif_paquetes = paquetesacifrar(cab_paquetes)
+    tamañocifrar = 0
+    for paquete in cif_paquetes[0]:
+        tamañocifrar += len(paquete)
+    print ("tamaño total a cifrar",tamañocifrar)
     #print("paquetesacifrar",cif_paquetes)
     PacketHandler(cif_paquetes[0],cif_paquetes[1],cif_paquetes[2],cif_paquetes[3])
 
