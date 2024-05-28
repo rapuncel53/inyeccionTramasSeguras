@@ -29,7 +29,7 @@ t24 = 493
 t25 = 509
 def colocarcabeceras(paquetes_ordenados):  #COLOCA LOS PAQUETES CON SUS CABECERAS 
     paquetes_cabeceras = {}
-    
+    #print("paquetes ordenados ",paquetes_ordenados)
     for mac,paquete in paquetes_ordenados.items():
         
         paquetes_cabeceras[mac] = []

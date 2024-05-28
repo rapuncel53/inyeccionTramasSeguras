@@ -33,6 +33,16 @@
 
 # DIFS y SIFS
 
+# import sys
+# import os
+
+# # Añadir la carpeta que contiene el módulo a sys.path
+# sys.path.append(os.path.abspath("/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/prueba3"))
+
+# # Ahora puedes importar el módulo
+# from a_generarFicheroPaquetes import leer_datos_paquetes
+
+
 
 #Cálculo del tiempo que tarda en mandar un paquete de longitud L
 #  Estimación SIN envío de RTS/CTS:
@@ -44,11 +54,39 @@ TDataPreambulo = TAckPreambulo = 96 * 10**(-6)
 TDataMac = (L+36)*8/Rb
 SIFS = 10 * 10**(-6)
 TAckMac = 14*8/Rb
-Ttotal = DIFS + Backoff_medio + TDataPreambulo +TDataMac + SIFS + TAckPreambulo + TAckMac
+Tpaquete = DIFS + Backoff_medio + TDataPreambulo +TDataMac + SIFS + TAckPreambulo + TAckMac
+
+def calcularEficiencia(nombre_archivo):
+
+    TTotal = 0
+    i=0
+    try:
+        with open(nombre_archivo, 'r') as archivo:
+            lineas = archivo.readlines() #leemos las lineas del archivo
+            
+            for linea in lineas:
+                
+                # Dividir la línea en tiempo, tamaño y destino
+                tiempo, tamano, destino = linea.strip().split(' ')
+                L = int(tamano)
+                TDataMac = (L+36)*8/Rb
+                Tpaquete = DIFS + Backoff_medio + TDataPreambulo +TDataMac + SIFS + TAckPreambulo + TAckMac
+                print("Tiempo paquete ",i," = ",Tpaquete)
+                TTotal += Tpaquete
+                i += 1
+            print("Tiempo total en el aire de los paquetes por separado = ", TTotal)
 
 
 
-#EFICICENCIA
 
-TData = L *8 /Rb
-eficiencia = TData / Ttotal
+    except FileNotFoundError:
+        print(f"El archivo {nombre_archivo} no fue encontrado.")
+    except ValueError:
+        print("Error al convertir el tiempo a entero.")
+
+# eth_paquetes = leer_datos_paquetes("/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/prueba3/datosPaquetes2.txt")
+# for paquetes in eth_paquetes:
+#     print("paquetes")
+
+
+calcularEficiencia("/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/prueba3/datosPaquetes.txt")

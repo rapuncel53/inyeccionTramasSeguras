@@ -18,7 +18,9 @@ def paquetesacifrar(paquetes_con_cabeceras):  #ASIGNA LAS CLAVES A CADA PAQUETE
             # print("mac")
             # print(mac)
             # print("lenpaquete")
-            # print (len(paquete))
+            #print ("paquete ",paquete)
+    
+            #print ("tamaño paquete ",len(paquete))
             if primer_llamado:
                 ps1,xs1 = claves1(mac, len(paquete))
                 ps.append(ps1)
@@ -28,16 +30,17 @@ def paquetesacifrar(paquetes_con_cabeceras):  #ASIGNA LAS CLAVES A CADA PAQUETE
                 ps.append(ps2)
                 xs.append(xs2)
             primer_llamado = False  # Después de la primera llamada, cambiar la bandera
+            #print("claves ",paquetes_a_cifrar,ps,xs,Hdr)
                                                                                                                                       
     return paquetes_a_cifrar,ps,xs,Hdr #paquete y claves
 
-eth_paquetes = leer_datos_paquetes("datosPaquetes.txt")
-for paquetes in eth_paquetes:
-    ord_paquetes = ordenarpaquetes(paquetes) #aqui no se pierde paquetes
-    cab_paquetes = colocarcabeceras(ord_paquetes)
-    cif_paquetes = paquetesacifrar(cab_paquetes)
-    tamañocifrar = 0
-    for paquete in cif_paquetes[0]:
-        tamañocifrar += len(paquete)
-    print ("tamaño total a cifrar",tamañocifrar)
+# eth_paquetes = leer_datos_paquetes("datosPaquetes.txt")
+# for paquetes in eth_paquetes:
+#     ord_paquetes = ordenarpaquetes(paquetes) #aqui no se pierde paquetes
+#     cab_paquetes = colocarcabeceras(ord_paquetes)
+#     cif_paquetes = paquetesacifrar(cab_paquetes)
+#     tamañocifrar = 0
+#     for paquete in cif_paquetes[0]:
+#         tamañocifrar += len(paquete)
+#     print ("tamaño total a cifrar",tamañocifrar)
     

@@ -32,10 +32,13 @@ def PacketHandler(paquetes,ps,xs,Hdr):
 		packet = []
 		#print ("transmito en forma2")
 		qoscontrol = b'\x00\x00'
+		
 		mpduCi = cifrarCRTbasica(paquetes,ps,xs,Hdr)#tiene que leer paquetes eth de un fichero e ir enviandolos
 		#print(mpduCi)
 		packet.append(RadioTap(present='Rate',Rate=int(rates)) / Dot11(type=2, subtype=8, addr1=AP_MAC_2, addr2=AP_MAC,
 		addr3=AP_MAC) / qoscontrol / mpduCi)
+		print("len mpduCi ",len(mpduCi))
+		print("lenpaquete ",len(packet[0]))
 		sendp(packet, iface=IFACE, verbose=False)
 	if int(forma) == 3:
 		calcPRIMOS(1,1)
@@ -45,7 +48,17 @@ def PacketHandler(paquetes,ps,xs,Hdr):
 # rates=sys.argv[1]
 # forma=sys.argv[2]
 
-eth_paquetes = leer_datos_paquetes("datosPaquetes2.txt")
+eth_paquetes = leer_datos_paquetes("datosPaquetes3.txt")
+
+
+#L=2
+Rb = 11
+DIFS = 50 * 10**(-6)
+Backoff_medio = 310 * 10**(-6)
+TDataPreambulo = TAckPreambulo = 96 * 10**(-6)
+#TDataMac = (L+36)*8/Rb
+SIFS = 10 * 10**(-6)
+TAckMac = 14*8/Rb
 for paquetes in eth_paquetes:
     ord_paquetes = ordenarpaquetes(paquetes)
     cab_paquetes = colocarcabeceras(ord_paquetes)
@@ -53,8 +66,20 @@ for paquetes in eth_paquetes:
     tamañocifrar = 0
     for paquete in cif_paquetes[0]:
         tamañocifrar += len(paquete)
+        
+
+
     print ("tamaño total a cifrar",tamañocifrar)
+    TDataMac = (tamañocifrar+36)*8/Rb
+    Tpaquete = DIFS + Backoff_medio + TDataPreambulo +TDataMac + SIFS + TAckPreambulo + TAckMac
+    print("Tiempo en el aire de la agrupacion = ",Tpaquete)
     #print("paquetesacifrar",cif_paquetes)
+    Total = 0
+    for paquete in cif_paquetes[0]:
+        #print("tamaño ",len(paquete))
+        Total += len(paquete)
+    print("tamaño TOTAL ",Total)
     PacketHandler(cif_paquetes[0],cif_paquetes[1],cif_paquetes[2],cif_paquetes[3])
+	
 
 
