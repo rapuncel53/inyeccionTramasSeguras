@@ -90,3 +90,13 @@ def calcularEficiencia(nombre_archivo):
 
 
 calcularEficiencia("/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/prueba3/datosPaquetes.txt")
+
+
+
+# Parámetros para Diferentes Protocolos
+# 802.11b
+# Velocidad de Transmisión (Rb): 1, 2, 5.5, 11 Mbps (usaremos 11 Mbps)
+# DIFS: 50 µs
+# SIFS: 10 µs
+# Preambulo: 192 µs (long preamble), 96 µs (short preamble)
+# ACK: 112 bits (14 bytes)

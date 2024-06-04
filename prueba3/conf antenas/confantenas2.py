@@ -3,17 +3,32 @@ import subprocess
 def listar_interfaces_wifi():
     try:
         resultado = subprocess.check_output(['iwconfig'], stderr=subprocess.STDOUT).decode('utf-8')
-        interfaces = [line.split()[0] for line in resultado.split('\n') if 'IEEE 802.11' in line]
-        return interfaces
+        lineaAnterior = ""
+        interface = []
+        for line in resultado.split('\n'):
+            if 'Managed' in line:
+                interface.append(lineaAnterior.split()[0]) 
+                
+            lineaAnterior = line
+        return interface
+            
     except subprocess.CalledProcessError as e:
         print("Error al listar interfaces WiFi:", e.output.decode())
         return []
 
 def configurar_modo_monitor(interface):
     try:
-        subprocess.check_call(['sudo', 'ifconfig', interface, 'down'])
-        subprocess.check_call(['sudo', 'iwconfig', interface, 'mode', 'monitor'])
-        subprocess.check_call(['sudo', 'ifconfig', interface, 'up'])
+         # Activar la interfaz
+        subprocess.run(['ifconfig', interface, 'up'])
+
+    # Configurar la interfaz en modo monitor
+        subprocess.run(['iwconfig', interface, 'mode', 'monitor'])
+
+    # Cambiar al canal 1 (2.412 GHz)
+        subprocess.run(['iwconfig', interface, 'channel', '1'])
+        # subprocess.check_call(['sudo', 'ifconfig', interface, 'down'])
+        # subprocess.check_output(['sudo', 'iwconfig', interface, 'mode', 'monitor'])
+        # subprocess.check_call(['sudo', 'ifconfig', interface, 'up'])
         print(f"La interfaz {interface} está ahora en modo monitor.")
     except subprocess.CalledProcessError as e:
         print(f"Error al configurar {interface} en modo monitor:", e.output.decode())

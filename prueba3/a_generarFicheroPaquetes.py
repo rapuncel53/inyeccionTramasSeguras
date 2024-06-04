@@ -3,7 +3,7 @@ import random
 import time
 from scapy.all import rdpcap,Ether,IP
 
-Rb = 11
+Rb = 11*10**6
 DIFS = 50 * 10**(-6)
 Backoff_medio = 310 * 10**(-6)
 TDataPreambulo = TAckPreambulo = 96 * 10**(-6)
@@ -44,7 +44,7 @@ def leer_datos_paquetes(nombre_archivo):
                 TDataMac = (L+36)*8/Rb
                 Tpaquete = DIFS + Backoff_medio + TDataPreambulo +TDataMac + SIFS + TAckPreambulo + TAckMac
                 i += 1
-                #print("paquete numero ",i," Taire ",Tpaquete," Tamaño ",tamano)
+                print("paquete numero ",i," Taire ",Tpaquete," Tamaño ",tamano)
                 TTotal += Tpaquete
                 
 
@@ -81,7 +81,7 @@ def leer_datos_paquetes(nombre_archivo):
                 # print("tamaño3",tamaño3)
                 # print("Tamaño Total",tamañoT)
 
-                if tamaño1 > 640 or tamaño2 > 640 or tamaño3 > 640 or tamañoT > 1448 or tiempo - tiempo_inicial > 550:
+                if tamaño1 > 640 or tamaño2 > 640 or tamaño3 > 640 or tamañoT > 1448 or tiempo - tiempo_inicial > 0.550:
                     
                     #nos guardamos el tamaño del ultimo paquete y ponemos el resto a cero
                     # print("tamaño de los datos utiles",tamañogrupo)
@@ -106,6 +106,7 @@ def leer_datos_paquetes(nombre_archivo):
                         print("tamaño de los datos utiles",tamañodatos)
                         print("tamaño1=",tamaño1,", tamaño2=",tamaño2,", tamaño3=",tamaño3)
                         print("tamaño de los datos a cifrar",tamaño1+tamaño2+tamaño3)
+                        print("Tiempo total en el aire de los paquetes por separado = ", TTotal)
                         tamaño1 = tamaño2 = tamaño3 = 4
                         tamaño1 = (tamano +6)
                         
@@ -114,6 +115,7 @@ def leer_datos_paquetes(nombre_archivo):
                         print("tamaño de los datos utiles",tamañodatos)
                         print("tamaño1=",tamaño1,", tamaño2=",tamaño2,", tamaño3=",tamaño3)
                         print("tamaño de los datos a cifrar",tamaño1+tamaño2+tamaño3)
+                        print("Tiempo total en el aire de los paquetes por separado = ", TTotal)
                         tamaño1 = tamaño2 = tamaño3 = 4
                         tamaño2 = (tamano +6)
                         
@@ -122,6 +124,7 @@ def leer_datos_paquetes(nombre_archivo):
                         print("tamaño de los datos utiles",tamañodatos)
                         print("tamaño1=",tamaño1,", tamaño2=",tamaño2,", tamaño3=",tamaño3)
                         print("tamaño de los datos a cifrar",tamaño1+tamaño2+tamaño3)
+                        print("Tiempo total en el aire de los paquetes por separado = ", TTotal)
                         tamaño1 = tamaño2 = tamaño3 = 4
                         tamaño3 = (tamano +6)
                     
@@ -134,16 +137,16 @@ def leer_datos_paquetes(nombre_archivo):
                         paquetes_leidos = []  # Reiniciar la lista de paquetes leídos
                         
                         print("-------------------------------------------------------------------------------------")
-                        print("Tiempo total en el aire de los paquetes por separado = ", TTotal)
+                        
                         i=TTotal = 0
                     tiempo_inicial = tiempo  # Actualizar el tiempo inicial
 
                 #payload = os.urandom(tamano - 20)   #quitar cabecera IP
-                #payload = b'\x11' * (tamano - 20)
-                payload = b'\x99' * (tamano)
+                payload = b'\x11' * (tamano - 20)
+                #payload = b'\x99' * (tamano)
                 #print("tamaño payload",len(payload))
-                #ethernet_packet = Ether(dst=dst, src="00:00:00:00:00:00") / IP(dst=ipdst) / payload
-                ethernet_packet = Ether(dst=dst, src="00:00:00:00:00:00") / payload
+                ethernet_packet = Ether(dst=dst, src="00:00:00:00:00:00") / IP(dst=ipdst) / payload
+                #ethernet_packet = Ether(dst=dst, src="00:00:00:00:00:00") / payload
                 #print("tamaño ethernet",len(ethernet_packet))
                 
                 paquetes_leidos.append(ethernet_packet) #ahora guardamos el paquete actual en los buffers (despues de enviarlos si se han llenado)

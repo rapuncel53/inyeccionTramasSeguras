@@ -1,4 +1,5 @@
 from e_calcularClaves import *
+from calcularclaves2 import *
 from a_generarFicheroPaquetes import leer_datos_paquetes
 from b_ordenarpaquetes import ordenarpaquetes
 from c_colocarCabeceras import colocarcabeceras
@@ -15,18 +16,21 @@ def paquetesacifrar(paquetes_con_cabeceras):  #ASIGNA LAS CLAVES A CADA PAQUETE
         for paquete in paquetes_con_cabeceras[mac]:
             
             paquetes_a_cifrar.append(paquete)
-            # print("mac")
-            # print(mac)
+            #print("mac")
+            #print(mac)
             # print("lenpaquete")
             #print ("paquete ",paquete)
     
             #print ("tamaño paquete ",len(paquete))
             if primer_llamado:
-                ps1,xs1 = claves1(mac, len(paquete))
+                ps1,xs1 = claves(mac, -1)
+                #ps1,xs1 = claves1(mac, len(paquete))
                 ps.append(ps1)
                 xs.append(xs1)
             else:
-                ps2,xs2 = claves2(mac, len(paquete))
+                #ps2,xs2 = claves2(mac, len(paquete))
+                ps2,xs2 = claves(mac, len(paquete))
+                print("tamaño clave 2",len(paquete),"mac",mac)
                 ps.append(ps2)
                 xs.append(xs2)
             primer_llamado = False  # Después de la primera llamada, cambiar la bandera
