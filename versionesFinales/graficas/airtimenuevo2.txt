@@ -1,0 +1,341 @@
+paquete numero 1 Destino 2 Taire 0.0007692727272727273 Tamaño 235 Tiempo 0.000787
+paquete numero 2 Destino 1 Taire 0.0007467272727272727 Tamaño 204 Tiempo 0.001284
+paquete numero 3 Destino 1 Taire 0.000674 Tamaño 104 Tiempo 0.001726
+paquete numero 4 Destino 2 Taire 0.0006543636363636364 Tamaño 77 Tiempo 0.002016
+paquete numero 5 Destino 1 Taire 0.0007627272727272727 Tamaño 226 Tiempo 0.002377
+paquete numero 6 Destino 2 Taire 0.0006703636363636364 Tamaño 99 Tiempo 0.002443
+paquete numero 7 Destino 3 Taire 0.0006492727272727272 Tamaño 70 Tiempo 0.002905
+paquete numero 8 Destino 3 Taire 0.000751090909090909 Tamaño 210 Tiempo 0.003454
+Tiempo total en el aire de los paquetes por separado = 0.0056778181818181814 ,tiempo de envio agrupacion 0.004098
+Tiempo en el aire de la agrupación (calculado con función): 0.0015096363636363636
+paquete numero 9 Destino 1 Taire 0.0006878181818181817 Tamaño 123 Tiempo 0.004098
+paquete numero 10 Destino 2 Taire 0.0006594545454545454 Tamaño 84 Tiempo 0.004429
+paquete numero 11 Destino 3 Taire 0.0007343636363636364 Tamaño 187 Tiempo 0.004925
+paquete numero 12 Destino 1 Taire 0.0006638181818181818 Tamaño 90 Tiempo 0.005212
+paquete numero 13 Destino 1 Taire 0.0007125454545454545 Tamaño 157 Tiempo 0.005634
+paquete numero 14 Destino 1 Taire 0.000703090909090909 Tamaño 144 Tiempo 0.005964
+paquete numero 15 Destino 3 Taire 0.0006725454545454544 Tamaño 102 Tiempo 0.006766
+paquete numero 16 Destino 3 Taire 0.0007023636363636363 Tamaño 143 Tiempo 0.00742
+paquete numero 17 Destino 3 Taire 0.0007038181818181819 Tamaño 145 Tiempo 0.00795
+Tiempo total en el aire de los paquetes por separado = 0.0062398181818181814 ,tiempo de envio agrupacion 0.00803
+Tiempo en el aire de la agrupación (calculado con función): 0.001474
+paquete numero 18 Destino 3 Taire 0.0006776363636363637 Tamaño 109 Tiempo 0.00803
+paquete numero 19 Destino 1 Taire 0.000687090909090909 Tamaño 122 Tiempo 0.008449
+paquete numero 20 Destino 3 Taire 0.00077 Tamaño 236 Tiempo 0.009249
+paquete numero 21 Destino 3 Taire 0.0007169090909090909 Tamaño 163 Tiempo 0.009843
+paquete numero 22 Destino 1 Taire 0.0007787272727272726 Tamaño 248 Tiempo 0.010292
+paquete numero 23 Destino 2 Taire 0.0007423636363636364 Tamaño 198 Tiempo 0.011053
+paquete numero 24 Destino 2 Taire 0.0006856363636363636 Tamaño 120 Tiempo 0.011307
+Tiempo total en el aire de los paquetes por separado = 0.005058363636363636 ,tiempo de envio agrupacion 0.011825
+Tiempo en el aire de la agrupación (calculado con función): 0.001487090909090909
+paquete numero 25 Destino 3 Taire 0.0007263636363636362 Tamaño 176 Tiempo 0.011825
+paquete numero 26 Destino 2 Taire 0.0006667272727272727 Tamaño 94 Tiempo 0.011986
+paquete numero 27 Destino 1 Taire 0.000676909090909091 Tamaño 108 Tiempo 0.012624
+paquete numero 28 Destino 1 Taire 0.0006979999999999999 Tamaño 137 Tiempo 0.013079
+paquete numero 29 Destino 2 Taire 0.000666 Tamaño 93 Tiempo 0.01333
+paquete numero 30 Destino 2 Taire 0.0007743636363636363 Tamaño 242 Tiempo 0.013692
+paquete numero 31 Destino 1 Taire 0.0007779999999999999 Tamaño 247 Tiempo 0.01414
+paquete numero 32 Destino 2 Taire 0.0007212727272727272 Tamaño 169 Tiempo 0.014795
+Tiempo total en el aire de los paquetes por separado = 0.0057076363636363635 ,tiempo de envio agrupacion 0.015038
+Tiempo en el aire de la agrupación (calculado con función): 0.0015394545454545455
+paquete numero 33 Destino 2 Taire 0.0006856363636363636 Tamaño 120 Tiempo 0.015038
+paquete numero 34 Destino 2 Taire 0.0007045454545454546 Tamaño 146 Tiempo 0.015535
+paquete numero 35 Destino 2 Taire 0.000695090909090909 Tamaño 133 Tiempo 0.015899
+Tiempo total en el aire de los paquetes por separado = 0.0020852727272727273 ,tiempo de envio agrupacion 0.016418
+Tiempo en el aire de la agrupación (calculado con función): 0.0008958181818181818
+paquete numero 36 Destino 2 Taire 0.000775090909090909 Tamaño 243 Tiempo 0.016418
+paquete numero 37 Destino 2 Taire 0.0007765454545454546 Tamaño 245 Tiempo 0.016624
+paquete numero 38 Destino 1 Taire 0.0007234545454545455 Tamaño 172 Tiempo 0.016932
+paquete numero 39 Destino 2 Taire 0.0006776363636363637 Tamaño 109 Tiempo 0.017251
+paquete numero 40 Destino 3 Taire 0.0007772727272727273 Tamaño 246 Tiempo 0.017451
+paquete numero 41 Destino 1 Taire 0.0006485454545454545 Tamaño 69 Tiempo 0.018102
+Tiempo total en el aire de los paquetes por separado = 0.004378545454545454 ,tiempo de envio agrupacion 0.018367
+Tiempo en el aire de la agrupación (calculado con función): 0.001404181818181818
+paquete numero 42 Destino 2 Taire 0.0007743636363636363 Tamaño 242 Tiempo 0.018367
+paquete numero 43 Destino 3 Taire 0.0006718181818181817 Tamaño 101 Tiempo 0.018721
+paquete numero 44 Destino 3 Taire 0.0007787272727272726 Tamaño 248 Tiempo 0.018955
+paquete numero 45 Destino 2 Taire 0.0006674545454545454 Tamaño 95 Tiempo 0.019332
+paquete numero 46 Destino 2 Taire 0.0007023636363636363 Tamaño 143 Tiempo 0.01975
+paquete numero 47 Destino 1 Taire 0.0006354545454545455 Tamaño 51 Tiempo 0.020145
+Tiempo total en el aire de los paquetes por separado = 0.004230181818181818 ,tiempo de envio agrupacion 0.020801
+Tiempo en el aire de la agrupación (calculado con función): 0.001255090909090909
+paquete numero 48 Destino 2 Taire 0.0007110909090909089 Tamaño 155 Tiempo 0.020801
+paquete numero 49 Destino 3 Taire 0.0007503636363636364 Tamaño 209 Tiempo 0.021087
+paquete numero 50 Destino 2 Taire 0.0007139999999999999 Tamaño 159 Tiempo 0.021549
+paquete numero 51 Destino 1 Taire 0.0006936363636363636 Tamaño 131 Tiempo 0.021757
+paquete numero 52 Destino 3 Taire 0.0007016363636363636 Tamaño 142 Tiempo 0.021959
+paquete numero 53 Destino 3 Taire 0.0006405454545454545 Tamaño 58 Tiempo 0.022085
+paquete numero 54 Destino 3 Taire 0.000666 Tamaño 93 Tiempo 0.022384
+paquete numero 55 Destino 3 Taire 0.0006623636363636364 Tamaño 88 Tiempo 0.022759
+Tiempo total en el aire de los paquetes por separado = 0.005539636363636363 ,tiempo de envio agrupacion 0.022969
+Tiempo en el aire de la agrupación (calculado con función): 0.0013714545454545455
+paquete numero 56 Destino 3 Taire 0.0007794545454545453 Tamaño 249 Tiempo 0.022969
+paquete numero 57 Destino 2 Taire 0.0006521818181818181 Tamaño 74 Tiempo 0.023405
+paquete numero 58 Destino 1 Taire 0.0007147272727272726 Tamaño 160 Tiempo 0.02394
+paquete numero 59 Destino 2 Taire 0.0006921818181818182 Tamaño 129 Tiempo 0.024325
+paquete numero 60 Destino 3 Taire 0.000684909090909091 Tamaño 119 Tiempo 0.025272
+paquete numero 61 Destino 1 Taire 0.0007350909090909091 Tamaño 188 Tiempo 0.025372
+paquete numero 62 Destino 1 Taire 0.0006776363636363637 Tamaño 109 Tiempo 0.026163
+paquete numero 63 Destino 3 Taire 0.0006689090909090908 Tamaño 97 Tiempo 0.026489
+paquete numero 64 Destino 1 Taire 0.0006827272727272727 Tamaño 116 Tiempo 0.027424
+Tiempo total en el aire de los paquetes por separado = 0.006287818181818181 ,tiempo de envio agrupacion 0.027928
+Tiempo en el aire de la agrupación (calculado con función): 0.0015227272727272728
+paquete numero 65 Destino 3 Taire 0.0007336363636363635 Tamaño 186 Tiempo 0.027928
+paquete numero 66 Destino 3 Taire 0.0006725454545454544 Tamaño 102 Tiempo 0.028108
+paquete numero 67 Destino 3 Taire 0.0006594545454545454 Tamaño 84 Tiempo 0.028602
+paquete numero 68 Destino 2 Taire 0.0007285454545454545 Tamaño 179 Tiempo 0.028912
+paquete numero 69 Destino 2 Taire 0.0006441818181818182 Tamaño 63 Tiempo 0.029179
+paquete numero 70 Destino 3 Taire 0.0006441818181818182 Tamaño 63 Tiempo 0.029387
+paquete numero 71 Destino 2 Taire 0.0006943636363636363 Tamaño 132 Tiempo 0.030015
+paquete numero 72 Destino 1 Taire 0.0007779999999999999 Tamaño 247 Tiempo 0.030524
+paquete numero 73 Destino 1 Taire 0.0007649090909090909 Tamaño 229 Tiempo 0.030872
+Tiempo total en el aire de los paquetes por separado = 0.006319818181818182 ,tiempo de envio agrupacion 0.031462
+Tiempo en el aire de la agrupación (calculado con función): 0.0015547272727272727
+paquete numero 74 Destino 3 Taire 0.0007154545454545455 Tamaño 161 Tiempo 0.031462
+paquete numero 75 Destino 2 Taire 0.0007779999999999999 Tamaño 247 Tiempo 0.031736
+paquete numero 76 Destino 1 Taire 0.000764181818181818 Tamaño 228 Tiempo 0.032276
+paquete numero 77 Destino 3 Taire 0.000674 Tamaño 104 Tiempo 0.032731
+paquete numero 78 Destino 3 Taire 0.0006347272727272726 Tamaño 50 Tiempo 0.032991
+paquete numero 79 Destino 1 Taire 0.0007256363636363635 Tamaño 175 Tiempo 0.033598
+paquete numero 80 Destino 2 Taire 0.0007169090909090909 Tamaño 163 Tiempo 0.033844
+paquete numero 81 Destino 1 Taire 0.000746 Tamaño 203 Tiempo 0.034291
+Tiempo total en el aire de los paquetes por separado = 0.005754909090909091 ,tiempo de envio agrupacion 0.034711
+Tiempo en el aire de la agrupación (calculado con función): 0.0015867272727272729
+paquete numero 82 Destino 2 Taire 0.0007409090909090908 Tamaño 196 Tiempo 0.034711
+paquete numero 83 Destino 1 Taire 0.0006441818181818182 Tamaño 63 Tiempo 0.035152
+paquete numero 84 Destino 1 Taire 0.0007045454545454546 Tamaño 146 Tiempo 0.035604
+paquete numero 85 Destino 1 Taire 0.000738 Tamaño 192 Tiempo 0.035847
+paquete numero 86 Destino 3 Taire 0.0007634545454545454 Tamaño 227 Tiempo 0.036837
+paquete numero 87 Destino 3 Taire 0.0006449090909090908 Tamaño 64 Tiempo 0.036932
+paquete numero 88 Destino 2 Taire 0.000746 Tamaño 203 Tiempo 0.03736
+paquete numero 89 Destino 1 Taire 0.0006347272727272726 Tamaño 50 Tiempo 0.037622
+paquete numero 90 Destino 2 Taire 0.0007234545454545455 Tamaño 172 Tiempo 0.038032
+Tiempo total en el aire de los paquetes por separado = 0.006340181818181818 ,tiempo de envio agrupacion 0.038185
+Tiempo en el aire de la agrupación (calculado con función): 0.0015750909090909092
+paquete numero 91 Destino 2 Taire 0.0006761818181818181 Tamaño 107 Tiempo 0.038185
+paquete numero 92 Destino 3 Taire 0.0006972727272727273 Tamaño 136 Tiempo 0.038483
+paquete numero 93 Destino 1 Taire 0.0006376363636363636 Tamaño 54 Tiempo 0.038859
+paquete numero 94 Destino 1 Taire 0.0006856363636363636 Tamaño 120 Tiempo 0.039231
+paquete numero 95 Destino 1 Taire 0.0007227272727272728 Tamaño 171 Tiempo 0.039472
+paquete numero 96 Destino 1 Taire 0.0006645454545454544 Tamaño 91 Tiempo 0.039914
+paquete numero 97 Destino 2 Taire 0.0007576363636363637 Tamaño 219 Tiempo 0.040316
+paquete numero 98 Destino 2 Taire 0.0006929090909090909 Tamaño 130 Tiempo 0.040787
+paquete numero 99 Destino 2 Taire 0.0006965454545454546 Tamaño 135 Tiempo 0.041144
+Tiempo total en el aire de los paquetes por separado = 0.00623109090909091 ,tiempo de envio agrupacion 0.041765
+Tiempo en el aire de la agrupación (calculado con función): 0.001466
+paquete numero 100 Destino 2 Taire 0.0007321818181818181 Tamaño 184 Tiempo 0.041765
+paquete numero 101 Destino 2 Taire 0.0006361818181818182 Tamaño 52 Tiempo 0.042122
+paquete numero 102 Destino 2 Taire 0.0006689090909090908 Tamaño 97 Tiempo 0.043245
+paquete numero 103 Destino 3 Taire 0.0007605454545454544 Tamaño 223 Tiempo 0.043393
+paquete numero 104 Destino 1 Taire 0.000751090909090909 Tamaño 210 Tiempo 0.043902
+paquete numero 105 Destino 2 Taire 0.0007023636363636363 Tamaño 143 Tiempo 0.044176
+paquete numero 106 Destino 2 Taire 0.0006507272727272728 Tamaño 72 Tiempo 0.044495
+paquete numero 107 Destino 1 Taire 0.0007561818181818181 Tamaño 217 Tiempo 0.045451
+Tiempo total en el aire de los paquetes por separado = 0.005658181818181817 ,tiempo de envio agrupacion 0.045654
+Tiempo en el aire de la agrupación (calculado con función): 0.00149
+paquete numero 108 Destino 2 Taire 0.0007801818181818182 Tamaño 250 Tiempo 0.045654
+paquete numero 109 Destino 1 Taire 0.0006507272727272728 Tamaño 72 Tiempo 0.046205
+paquete numero 110 Destino 2 Taire 0.000682 Tamaño 115 Tiempo 0.046445
+paquete numero 111 Destino 2 Taire 0.0006609090909090908 Tamaño 86 Tiempo 0.047054
+paquete numero 112 Destino 1 Taire 0.0007350909090909091 Tamaño 188 Tiempo 0.047198
+paquete numero 113 Destino 1 Taire 0.0006645454545454544 Tamaño 91 Tiempo 0.047812
+paquete numero 114 Destino 1 Taire 0.0007219999999999999 Tamaño 170 Tiempo 0.047958
+paquete numero 115 Destino 2 Taire 0.0007074545454545455 Tamaño 150 Tiempo 0.048138
+Tiempo total en el aire de los paquetes por separado = 0.005602909090909091 ,tiempo de envio agrupacion 0.048533
+Tiempo en el aire de la agrupación (calculado con función): 0.0014318181818181819
+paquete numero 116 Destino 2 Taire 0.0006514545454545455 Tamaño 73 Tiempo 0.048533
+paquete numero 117 Destino 3 Taire 0.00077 Tamaño 236 Tiempo 0.048973
+paquete numero 118 Destino 2 Taire 0.0007518181818181817 Tamaño 211 Tiempo 0.049214
+paquete numero 119 Destino 3 Taire 0.0007118181818181818 Tamaño 156 Tiempo 0.049717
+paquete numero 120 Destino 3 Taire 0.0006732727272727273 Tamaño 103 Tiempo 0.050129
+Tiempo total en el aire de los paquetes por separado = 0.0035583636363636364 ,tiempo de envio agrupacion 0.050626
+Tiempo en el aire de la agrupación (calculado con función): 0.001178
+paquete numero 121 Destino 3 Taire 0.000764181818181818 Tamaño 228 Tiempo 0.050626
+paquete numero 122 Destino 2 Taire 0.0007496363636363637 Tamaño 208 Tiempo 0.050957
+paquete numero 123 Destino 2 Taire 0.0006689090909090908 Tamaño 97 Tiempo 0.051578
+paquete numero 124 Destino 3 Taire 0.0006863636363636363 Tamaño 121 Tiempo 0.051881
+paquete numero 125 Destino 1 Taire 0.0006594545454545454 Tamaño 84 Tiempo 0.052604
+paquete numero 126 Destino 1 Taire 0.0006885454545454546 Tamaño 124 Tiempo 0.052838
+paquete numero 127 Destino 2 Taire 0.0007663636363636363 Tamaño 231 Tiempo 0.052964
+paquete numero 128 Destino 1 Taire 0.0007627272727272727 Tamaño 226 Tiempo 0.053993
+Tiempo total en el aire de los paquetes por separado = 0.005746181818181818 ,tiempo de envio agrupacion 0.054482
+Tiempo en el aire de la agrupación (calculado con función): 0.001578
+paquete numero 129 Destino 1 Taire 0.000746 Tamaño 203 Tiempo 0.054482
+paquete numero 130 Destino 3 Taire 0.0007045454545454546 Tamaño 146 Tiempo 0.05482
+paquete numero 131 Destino 2 Taire 0.0007605454545454544 Tamaño 223 Tiempo 0.055126
+paquete numero 132 Destino 2 Taire 0.0007096363636363636 Tamaño 153 Tiempo 0.0553
+paquete numero 133 Destino 1 Taire 0.0007714545454545453 Tamaño 238 Tiempo 0.055541
+paquete numero 134 Destino 2 Taire 0.0006580000000000001 Tamaño 82 Tiempo 0.05592
+paquete numero 135 Destino 3 Taire 0.0007481818181818181 Tamaño 206 Tiempo 0.056035
+Tiempo total en el aire de los paquetes por separado = 0.005098363636363636 ,tiempo de envio agrupacion 0.056613
+Tiempo en el aire de la agrupación (calculado con función): 0.0015270909090909091
+paquete numero 136 Destino 1 Taire 0.0007656363636363636 Tamaño 230 Tiempo 0.056613
+paquete numero 137 Destino 2 Taire 0.0006521818181818181 Tamaño 74 Tiempo 0.057045
+paquete numero 138 Destino 2 Taire 0.0007445454545454544 Tamaño 201 Tiempo 0.057656
+paquete numero 139 Destino 2 Taire 0.0007089090909090909 Tamaño 152 Tiempo 0.058403
+paquete numero 140 Destino 3 Taire 0.0007329090909090908 Tamaño 185 Tiempo 0.058905
+paquete numero 141 Destino 2 Taire 0.0006383636363636362 Tamaño 55 Tiempo 0.05936
+paquete numero 142 Destino 2 Taire 0.0006732727272727273 Tamaño 103 Tiempo 0.059958
+paquete numero 143 Destino 3 Taire 0.000751090909090909 Tamaño 210 Tiempo 0.060145
+Tiempo total en el aire de los paquetes por separado = 0.0056669090909090905 ,tiempo de envio agrupacion 0.060581
+Tiempo en el aire de la agrupación (calculado con función): 0.0014987272727272727
+paquete numero 144 Destino 3 Taire 0.0007074545454545455 Tamaño 150 Tiempo 0.060581
+paquete numero 145 Destino 3 Taire 0.0006958181818181817 Tamaño 134 Tiempo 0.060662
+paquete numero 146 Destino 3 Taire 0.0007110909090909089 Tamaño 155 Tiempo 0.061334
+paquete numero 147 Destino 1 Taire 0.0007547272727272727 Tamaño 215 Tiempo 0.061769
+Tiempo total en el aire de los paquetes por separado = 0.002869090909090909 ,tiempo de envio agrupacion 0.0622
+Tiempo en el aire de la agrupación (calculado con función): 0.0010856363636363637
+paquete numero 148 Destino 3 Taire 0.0007736363636363636 Tamaño 241 Tiempo 0.0622
+paquete numero 149 Destino 3 Taire 0.0006456363636363635 Tamaño 65 Tiempo 0.062572
+paquete numero 150 Destino 3 Taire 0.0007038181818181819 Tamaño 145 Tiempo 0.062754
+paquete numero 151 Destino 2 Taire 0.0007147272727272726 Tamaño 160 Tiempo 0.063052
+paquete numero 152 Destino 1 Taire 0.0006434545454545455 Tamaño 62 Tiempo 0.063377
+paquete numero 153 Destino 1 Taire 0.0007009090909090909 Tamaño 141 Tiempo 0.063819
+Tiempo total en el aire de los paquetes por separado = 0.004182181818181818 ,tiempo de envio agrupacion 0.064364
+Tiempo en el aire de la agrupación (calculado con función): 0.0012078181818181819
+paquete numero 154 Destino 3 Taire 0.0007350909090909091 Tamaño 188 Tiempo 0.064364
+paquete numero 155 Destino 1 Taire 0.0007059999999999999 Tamaño 148 Tiempo 0.064751
+paquete numero 156 Destino 3 Taire 0.0007612727272727273 Tamaño 224 Tiempo 0.064989
+Tiempo total en el aire de los paquetes por separado = 0.0022023636363636364 ,tiempo de envio agrupacion 0.06532
+Tiempo en el aire de la agrupación (calculado con función): 0.001015818181818182
+paquete numero 157 Destino 3 Taire 0.0007721818181818182 Tamaño 239 Tiempo 0.06532
+paquete numero 158 Destino 1 Taire 0.0006572727272727272 Tamaño 81 Tiempo 0.065949
+paquete numero 159 Destino 3 Taire 0.0006696363636363637 Tamaño 98 Tiempo 0.066766
+paquete numero 160 Destino 1 Taire 0.0007794545454545453 Tamaño 249 Tiempo 0.067006
+paquete numero 161 Destino 1 Taire 0.0006667272727272727 Tamaño 94 Tiempo 0.067517
+paquete numero 162 Destino 3 Taire 0.0006812727272727273 Tamaño 114 Tiempo 0.068168
+paquete numero 163 Destino 1 Taire 0.0007241818181818182 Tamaño 173 Tiempo 0.068515
+Tiempo total en el aire de los paquetes por separado = 0.0049507272727272724 ,tiempo de envio agrupacion 0.068935
+Tiempo en el aire de la agrupación (calculado con función): 0.0013765454545454545
+paquete numero 164 Destino 3 Taire 0.0007663636363636363 Tamaño 231 Tiempo 0.068935
+paquete numero 165 Destino 3 Taire 0.0007045454545454546 Tamaño 146 Tiempo 0.069734
+paquete numero 166 Destino 1 Taire 0.0006587272727272727 Tamaño 83 Tiempo 0.070346
+paquete numero 167 Destino 2 Taire 0.0007074545454545455 Tamaño 150 Tiempo 0.07065
+paquete numero 168 Destino 1 Taire 0.0007503636363636364 Tamaño 209 Tiempo 0.071989
+paquete numero 169 Destino 1 Taire 0.0006470909090909091 Tamaño 67 Tiempo 0.072311
+paquete numero 170 Destino 3 Taire 0.0006747272727272727 Tamaño 105 Tiempo 0.072397
+paquete numero 171 Destino 3 Taire 0.0006892727272727273 Tamaño 125 Tiempo 0.07298
+Tiempo total en el aire de los paquetes por separado = 0.005598545454545455 ,tiempo de envio agrupacion 0.073503
+Tiempo en el aire de la agrupación (calculado con función): 0.0014303636363636363
+paquete numero 172 Destino 3 Taire 0.0007445454545454544 Tamaño 201 Tiempo 0.073503
+paquete numero 173 Destino 2 Taire 0.0006827272727272727 Tamaño 116 Tiempo 0.073646
+paquete numero 174 Destino 2 Taire 0.0007707272727272726 Tamaño 237 Tiempo 0.074116
+paquete numero 175 Destino 1 Taire 0.0007707272727272726 Tamaño 237 Tiempo 0.074154
+paquete numero 176 Destino 2 Taire 0.0007096363636363636 Tamaño 153 Tiempo 0.074348
+paquete numero 177 Destino 2 Taire 0.0006718181818181817 Tamaño 101 Tiempo 0.074469
+paquete numero 178 Destino 1 Taire 0.0007554545454545454 Tamaño 216 Tiempo 0.074957
+Tiempo total en el aire de los paquetes por separado = 0.005105636363636363 ,tiempo de envio agrupacion 0.075478
+Tiempo en el aire de la agrupación (calculado con función): 0.0015343636363636364
+paquete numero 179 Destino 1 Taire 0.0006885454545454546 Tamaño 124 Tiempo 0.075478
+paquete numero 180 Destino 2 Taire 0.0006383636363636362 Tamaño 55 Tiempo 0.075931
+paquete numero 181 Destino 1 Taire 0.0007598181818181817 Tamaño 222 Tiempo 0.076594
+paquete numero 182 Destino 3 Taire 0.0006390909090909091 Tamaño 56 Tiempo 0.076924
+paquete numero 183 Destino 1 Taire 0.0007154545454545455 Tamaño 161 Tiempo 0.077487
+paquete numero 184 Destino 1 Taire 0.0006427272727272728 Tamaño 61 Tiempo 0.077838
+Tiempo total en el aire de los paquetes por separado = 0.004084 ,tiempo de envio agrupacion 0.078215
+Tiempo en el aire de la agrupación (calculado con función): 0.0011081818181818183
+paquete numero 185 Destino 1 Taire 0.0007772727272727273 Tamaño 246 Tiempo 0.078215
+paquete numero 186 Destino 3 Taire 0.0006732727272727273 Tamaño 103 Tiempo 0.078423
+paquete numero 187 Destino 2 Taire 0.0006398181818181818 Tamaño 57 Tiempo 0.078957
+paquete numero 188 Destino 2 Taire 0.0006834545454545454 Tamaño 117 Tiempo 0.079525
+paquete numero 189 Destino 2 Taire 0.000746 Tamaño 203 Tiempo 0.079972
+paquete numero 190 Destino 3 Taire 0.0007438181818181818 Tamaño 200 Tiempo 0.080293
+paquete numero 191 Destino 2 Taire 0.0006747272727272727 Tamaño 105 Tiempo 0.080697
+paquete numero 192 Destino 1 Taire 0.0006550909090909091 Tamaño 78 Tiempo 0.081115
+paquete numero 193 Destino 3 Taire 0.0007467272727272727 Tamaño 204 Tiempo 0.081429
+Tiempo total en el aire de los paquetes por separado = 0.006340181818181819 ,tiempo de envio agrupacion 0.081558
+Tiempo en el aire de la agrupación (calculado con función): 0.0015750909090909092
+paquete numero 194 Destino 2 Taire 0.00069 Tamaño 126 Tiempo 0.081558
+paquete numero 195 Destino 3 Taire 0.0007554545454545454 Tamaño 216 Tiempo 0.081615
+paquete numero 196 Destino 3 Taire 0.0007074545454545455 Tamaño 150 Tiempo 0.081934
+paquete numero 197 Destino 2 Taire 0.0006805454545454544 Tamaño 113 Tiempo 0.082516
+paquete numero 198 Destino 3 Taire 0.0007649090909090909 Tamaño 229 Tiempo 0.082578
+Tiempo total en el aire de los paquetes por separado = 0.003598363636363636 ,tiempo de envio agrupacion 0.083082
+Tiempo en el aire de la agrupación (calculado con función): 0.0012180000000000001
+paquete numero 199 Destino 3 Taire 0.0007612727272727273 Tamaño 224 Tiempo 0.083082
+paquete numero 200 Destino 2 Taire 0.0007496363636363637 Tamaño 208 Tiempo 0.083352
+paquete numero 201 Destino 3 Taire 0.0007227272727272728 Tamaño 171 Tiempo 0.08336
+paquete numero 202 Destino 3 Taire 0.0006987272727272726 Tamaño 138 Tiempo 0.083726
+paquete numero 203 Destino 2 Taire 0.0007023636363636363 Tamaño 143 Tiempo 0.084323
+paquete numero 204 Destino 1 Taire 0.0006718181818181817 Tamaño 101 Tiempo 0.084641
+Tiempo total en el aire de los paquetes por separado = 0.004306545454545454 ,tiempo de envio agrupacion 0.084961
+Tiempo en el aire de la agrupación (calculado con función): 0.0013314545454545454
+paquete numero 205 Destino 3 Taire 0.0007219999999999999 Tamaño 170 Tiempo 0.084961
+paquete numero 206 Destino 2 Taire 0.0006543636363636364 Tamaño 77 Tiempo 0.085027
+paquete numero 207 Destino 2 Taire 0.00077 Tamaño 236 Tiempo 0.085463
+paquete numero 208 Destino 2 Taire 0.0007176363636363635 Tamaño 164 Tiempo 0.085711
+paquete numero 209 Destino 3 Taire 0.000764181818181818 Tamaño 228 Tiempo 0.086046
+Tiempo total en el aire de los paquetes por separado = 0.0036281818181818177 ,tiempo de envio agrupacion 0.086569
+Tiempo en el aire de la agrupación (calculado con función): 0.0012478181818181818
+paquete numero 210 Destino 2 Taire 0.0007649090909090909 Tamaño 229 Tiempo 0.086569
+paquete numero 211 Destino 2 Taire 0.0007023636363636363 Tamaño 143 Tiempo 0.086737
+paquete numero 212 Destino 1 Taire 0.0006936363636363636 Tamaño 131 Tiempo 0.086936
+paquete numero 213 Destino 1 Taire 0.0006485454545454545 Tamaño 69 Tiempo 0.08769
+paquete numero 214 Destino 2 Taire 0.0007190909090909091 Tamaño 166 Tiempo 0.087878
+paquete numero 215 Destino 3 Taire 0.0007081818181818182 Tamaño 151 Tiempo 0.088378
+paquete numero 216 Destino 1 Taire 0.0007736363636363636 Tamaño 241 Tiempo 0.08857
+paquete numero 217 Destino 1 Taire 0.0007343636363636364 Tamaño 187 Tiempo 0.088788
+Tiempo total en el aire de los paquetes por separado = 0.005744727272727273 ,tiempo de envio agrupacion 0.089191
+Tiempo en el aire de la agrupación (calculado con función): 0.0015765454545454546
+paquete numero 218 Destino 2 Taire 0.0006856363636363636 Tamaño 120 Tiempo 0.089191
+paquete numero 219 Destino 3 Taire 0.0007656363636363636 Tamaño 230 Tiempo 0.089266
+paquete numero 220 Destino 3 Taire 0.0007612727272727273 Tamaño 224 Tiempo 0.089686
+paquete numero 221 Destino 2 Taire 0.000674 Tamaño 104 Tiempo 0.090048
+paquete numero 222 Destino 2 Taire 0.0006499999999999999 Tamaño 71 Tiempo 0.090395
+paquete numero 223 Destino 3 Taire 0.0007256363636363635 Tamaño 175 Tiempo 0.090911
+Tiempo total en el aire de los paquetes por separado = 0.004262181818181818 ,tiempo de envio agrupacion 0.091481
+Tiempo en el aire de la agrupación (calculado con función): 0.001284909090909091
+paquete numero 224 Destino 3 Taire 0.00069 Tamaño 126 Tiempo 0.091481
+paquete numero 225 Destino 1 Taire 0.0007605454545454544 Tamaño 223 Tiempo 0.091679
+paquete numero 226 Destino 1 Taire 0.0007198181818181818 Tamaño 167 Tiempo 0.092275
+paquete numero 227 Destino 1 Taire 0.0006412727272727272 Tamaño 59 Tiempo 0.092704
+paquete numero 228 Destino 2 Taire 0.0007161818181818182 Tamaño 162 Tiempo 0.093245
+paquete numero 229 Destino 2 Taire 0.0007147272727272726 Tamaño 160 Tiempo 0.093305
+paquete numero 230 Destino 3 Taire 0.0007358181818181818 Tamaño 189 Tiempo 0.093405
+paquete numero 231 Destino 2 Taire 0.0006885454545454546 Tamaño 124 Tiempo 0.093889
+paquete numero 232 Destino 2 Taire 0.0006681818181818181 Tamaño 96 Tiempo 0.094657
+Tiempo total en el aire de los paquetes por separado = 0.006335090909090908 ,tiempo de envio agrupacion 0.094912
+Tiempo en el aire de la agrupación (calculado con función): 0.00157
+paquete numero 233 Destino 3 Taire 0.0007263636363636362 Tamaño 176 Tiempo 0.094912
+paquete numero 234 Destino 2 Taire 0.0007081818181818182 Tamaño 151 Tiempo 0.095523
+paquete numero 235 Destino 2 Taire 0.0007249090909090908 Tamaño 174 Tiempo 0.096013
+paquete numero 236 Destino 3 Taire 0.0007736363636363636 Tamaño 241 Tiempo 0.096551
+paquete numero 237 Destino 2 Taire 0.0007481818181818181 Tamaño 206 Tiempo 0.097181
+paquete numero 238 Destino 3 Taire 0.0007263636363636362 Tamaño 176 Tiempo 0.097627
+Tiempo total en el aire de los paquetes por separado = 0.004407636363636363 ,tiempo de envio agrupacion 0.098032
+Tiempo en el aire de la agrupación (calculado con función): 0.0014303636363636363
+paquete numero 239 Destino 2 Taire 0.0007707272727272726 Tamaño 237 Tiempo 0.098032
+paquete numero 240 Destino 3 Taire 0.0006725454545454544 Tamaño 102 Tiempo 0.098251
+paquete numero 241 Destino 2 Taire 0.0006856363636363636 Tamaño 120 Tiempo 0.098318
+paquete numero 242 Destino 3 Taire 0.0007234545454545455 Tamaño 172 Tiempo 0.098847
+paquete numero 243 Destino 2 Taire 0.0007169090909090909 Tamaño 163 Tiempo 0.099462
+Tiempo total en el aire de los paquetes por separado = 0.003569272727272727 ,tiempo de envio agrupacion 0.099658
+Tiempo en el aire de la agrupación (calculado con función): 0.001188909090909091
+paquete numero 244 Destino 2 Taire 0.0006878181818181817 Tamaño 123 Tiempo 0.099658
+paquete numero 245 Destino 1 Taire 0.0007190909090909091 Tamaño 166 Tiempo 0.099947
+paquete numero 246 Destino 1 Taire 0.0007663636363636363 Tamaño 231 Tiempo 0.100484
+paquete numero 247 Destino 3 Taire 0.0007212727272727272 Tamaño 169 Tiempo 0.100689
+paquete numero 248 Destino 1 Taire 0.0007103636363636363 Tamaño 154 Tiempo 0.101136
+Tiempo total en el aire de los paquetes por separado = 0.0036049090909090905 ,tiempo de envio agrupacion 0.101287
+Tiempo en el aire de la agrupación (calculado con función): 0.0012267272727272728
+paquete numero 249 Destino 1 Taire 0.0007401818181818181 Tamaño 195 Tiempo 0.101287
+paquete numero 250 Destino 1 Taire 0.0007009090909090909 Tamaño 141 Tiempo 0.101827
+paquete numero 251 Destino 3 Taire 0.0006514545454545455 Tamaño 73 Tiempo 0.102256
+paquete numero 252 Destino 2 Taire 0.0006616363636363635 Tamaño 87 Tiempo 0.102503
+paquete numero 253 Destino 3 Taire 0.0007394545454545454 Tamaño 194 Tiempo 0.103015
+paquete numero 254 Destino 2 Taire 0.0006747272727272727 Tamaño 105 Tiempo 0.103518
+paquete numero 255 Destino 3 Taire 0.000676909090909091 Tamaño 108 Tiempo 0.103887
+paquete numero 256 Destino 2 Taire 0.0007423636363636364 Tamaño 198 Tiempo 0.104533
+paquete numero 257 Destino 2 Taire 0.0007678181818181817 Tamaño 233 Tiempo 0.104816
+Tiempo total en el aire de los paquetes por separado = 0.006355454545454545 ,tiempo de envio agrupacion 0.105027
+Tiempo en el aire de la agrupación (calculado con función): 0.0015903636363636365
+paquete numero 258 Destino 3 Taire 0.0007474545454545454 Tamaño 205 Tiempo 0.105027
+paquete numero 259 Destino 2 Taire 0.0007241818181818182 Tamaño 173 Tiempo 0.105138
+paquete numero 260 Destino 3 Taire 0.000703090909090909 Tamaño 144 Tiempo 0.105525
+paquete numero 261 Destino 1 Taire 0.0007663636363636363 Tamaño 231 Tiempo 0.106078
+paquete numero 262 Destino 1 Taire 0.0006805454545454544 Tamaño 113 Tiempo 0.106317
+paquete numero 263 Destino 1 Taire 0.0006383636363636362 Tamaño 55 Tiempo 0.106867
+paquete numero 264 Destino 1 Taire 0.0007481818181818181 Tamaño 206 Tiempo 0.107127
+paquete numero 265 Destino 3 Taire 0.0006492727272727272 Tamaño 70 Tiempo 0.107586
+Tiempo total en el aire de los paquetes por separado = 0.005657454545454545 ,tiempo de envio agrupacion 0.107919
+Tiempo en el aire de la agrupación (calculado con función): 0.0014892727272727273

@@ -2,9 +2,10 @@
 #!/usr/bin/env python
 # import scapy module
 import socket
+import time
 import sys
 import scapy.all as scapy
-from scapy.all import IP
+from scapy.all import IP,Ether,Raw
 from scapy.layers.dot11 import Dot11, RadioTap, Dot11Elt, Dot11EltHTCapabilities, Dot11AssoReq
 from scapy.sendrecv import sendp
 #from Generatramas import *
@@ -17,11 +18,11 @@ ap_list = []
 IFACE2 = 'wlx00c0caa4737b'
 AP_MAC_2 = '00:c0:ca:a4:73:7b'#mac rx
 AP_MAC= '00:c0:ca:a8:1a:35'#mac tx
-rate=11
+#rate=11
 forma = 2
 
 key = b'\x01\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a\x03\x0a'
-paquetes_recuperados = []
+
 
 packet_count = 0
 
@@ -35,87 +36,101 @@ Hdr = 28437963267469698655177751373315874860469048118865033231028561462561298564
 def PacketHandler(pkt):     #RECEPCION DE SIEMPRE
     # Capturamos el AMPDU
     #print("tipo",pkt.subtype)
-    
-    if pkt.type == 2 and pkt.subtype == 8 and pkt.addr1==AP_MAC_2:
-        if pkt.subtype not in ap_list:
-            #ap_list.append(pkt.subtype)
-            ver=pkt.getlayer(Dot11)
-            print("LONGITUD ENTRADA RADIO",len(ver))
-            #print(hexdump(ver))
-            n=0
-            numero=int.from_bytes(ver, byteorder='big')
-            hexa=numero.to_bytes((numero.bit_length() + 7) // 8, byteorder='big')
-            print("LONGITUD conversion entrada", len(hexa))
 
-            AMPDU_FINAL = b''
-            for i in hexa:
-                #print(hex(i))
-                if n<(len(hexa)-4) and n>=26:
-                    if i != 0:
-                        by = i.to_bytes((i.bit_length() + 7) // 8, byteorder='big')
-                        AMPDU_FINAL = AMPDU_FINAL + by
-                    else:
-                        AMPDU_FINAL = AMPDU_FINAL + b'\x00'
+    paquetes_recuperados = []
+    if pkt.haslayer(Dot11):
+        dot11_layer = pkt.getlayer(Dot11)
+        if pkt.type == 2 and pkt.subtype == 8 and pkt.addr1==AP_MAC_2:
+            
+            
+            if pkt.subtype not in ap_list:
+                #ap_list.append(pkt.subtype)
+                ver=pkt.getlayer(Dot11)
+                print("LONGITUD ENTRADA RADIO",len(ver))
+                #print(hexdump(ver))
+                n=0
+                numero=int.from_bytes(ver, byteorder='big')
+                hexa=numero.to_bytes((numero.bit_length() + 7) // 8, byteorder='big')
+                print("LONGITUD conversion entrada", len(hexa))
+                tiempo_actual = time.time()
+                print("Paquete recibido en el tiempo:", tiempo_actual)
 
-                n = n + 1
-            #print(hexdump(AMPDU_FINAL))
-            intAMPDUfinal=int.from_bytes(AMPDU_FINAL, byteorder='big')
+                AMPDU_FINAL = b''
+                for i in hexa:
+                    #print(hex(i))
+                    if n<(len(hexa)-4) and n>=26:
+                        if i != 0:
+                            by = i.to_bytes((i.bit_length() + 7) // 8, byteorder='big')
+                            AMPDU_FINAL = AMPDU_FINAL + by
+                        else:
+                            AMPDU_FINAL = AMPDU_FINAL + b'\x00'
 
-            if int(forma) == 2:
-                global packet_count
-                packet_count += 1  # Increment the packet count
-                ps, xs = claves("22:22:22:22:22:22", -1)
-                MSDUs = AMSDU_dec_limpia(Hdr, intAMPDUfinal, [ps], [xs])
-                print (MSDUs)
-                paquetes_recibidos = None
-                x=MSDUs[0].to_bytes((MSDUs[0].bit_length() + 7) // 8, byteorder='big')
-                dst_ip_bytes = x[21:25]
-                dst_ip = socket.inet_ntoa(dst_ip_bytes)
-                print(f"Dirección IP de destino: {dst_ip}")
-                    
-                if dst_ip == "2.2.2.2":
-                    paquetes_recibidos=x[3:]
-                    print(hexdump(x))
-                    clave_siguiente = int(x[1:3].hex(),16)
-                    ps, xs = claves("22:22:22:22:22:22", clave_siguiente)
-                    print("clave siguiente",clave_siguiente,"paquete numero ",packet_count)
-                    if clave_siguiente != 0:
-                        MSDUs = AMSDU_dec_limpia(Hdr, intAMPDUfinal, [ps], [xs])
-                        x=MSDUs[0].to_bytes((MSDUs[0].bit_length() + 7) // 8, byteorder='big')
-                        paquetes_recibidos+=x[1:]
+                    n = n + 1
+                #print(hexdump(AMPDU_FINAL))
+                intAMPDUfinal=int.from_bytes(AMPDU_FINAL, byteorder='big')
+                
+
+                if int(forma) == 2:
+                    global packet_count
+                    packet_count += 1  # Increment the packet count
+                    ps, xs = claves("22:22:22:22:22:22", -1)
+                    MSDUs = AMSDU_dec_limpia(Hdr, intAMPDUfinal, [ps], [xs])
+                    print (MSDUs)
+                    paquetes_recibidos = None
+                    x=MSDUs[0].to_bytes((MSDUs[0].bit_length() + 7) // 8, byteorder='big')
+                    dst_ip_bytes = x[21:25]
+                    dst_ip = socket.inet_ntoa(dst_ip_bytes)
+                    print(f"Dirección IP de destino: {dst_ip}")
+                        
+                    if dst_ip == "2.2.2.2":
+                        
+                        paquetes_recibidos=x[3:]
                         print(hexdump(x))
-                        print("paquetes_recibidos ",paquetes_recibidos)
+                        clave_siguiente = int(x[1:3].hex(),16)
+                        ps, xs = claves("22:22:22:22:22:22", clave_siguiente)
+                        print("clave siguiente",clave_siguiente,"paquete numero ",packet_count)
+                        if clave_siguiente != 0:
+                            MSDUs = AMSDU_dec_limpia(Hdr, intAMPDUfinal, [ps], [xs])
+                            x=MSDUs[0].to_bytes((MSDUs[0].bit_length() + 7) // 8, byteorder='big')
+                            paquetes_recibidos+=x[1:]
+                            print(hexdump(x))
+                            print("paquetes_recibidos ",paquetes_recibidos)
+                        
+                    #nuevo=MSDUs.to_bytes((MSDUs.bit_length() + 7) // 8, byteorder='big')
                     
-                #nuevo=MSDUs.to_bytes((MSDUs.bit_length() + 7) // 8, byteorder='big')
-                
-                tam=0
-                tamaño_siguiente = 0
-                if paquetes_recibidos:
-                    while len(paquetes_recibidos)>(tam+2+tamaño_siguiente):
-                        tamaño_siguiente = int(paquetes_recibidos[tam:(tam+2)].hex(),16)
-                        print(paquetes_recibidos[tam:(tam+2)])
-                        print("Tamaño siguiente",tamaño_siguiente)
-                        print("paquete recibido",paquetes_recibidos[(tam+2):(tam+2+tamaño_siguiente)])
-                        paquetes_recuperados.append(paquetes_recibidos[(tam+2):(tam+2+tamaño_siguiente)])
-                        #yield paquetes_recuperados
-                        tam += tamaño_siguiente+2
-                     
-                
-            #exit()
-            if pkt.haslayer(Dot11):
-                radiotap = pkt.getlayer(RadioTap)
-                if radiotap and hasattr(radiotap, 'rate'):
-                    rate = radiotap.rate / 2.0  # Scapy returns rate in 500 kbps units
-                    print(f"Tasa de transmisión: {rate} Mbps")
-                else:
-                    print("Paquete capturado sin tasa de transmisión")
-            print("SALIMOS")
-            # Save the packets to a pcap file
-            scapy.wrpcap('/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/prueba3/paquetes_recuperados.pcap', paquetes_recuperados)
-            #MSDU, lapso = AMPDU_dec(int.from_bytes(ver, byteorder='big'), key)
+                    tam=0
+                    tamaño_siguiente = 0
+                    if paquetes_recibidos:
+                        while len(paquetes_recibidos)>(tam):
+                            tamaño_siguiente = int(paquetes_recibidos[tam:(tam+2)].hex(),16)
+                            print(paquetes_recibidos[tam:(tam+2)])
+                            print("Tamaño siguiente",tamaño_siguiente)
+                            print("paquete recibido",paquetes_recibidos[(tam+2):(tam+2+tamaño_siguiente)])
+                            paquetes_recuperados.append( b'\x00\x00\x00\x00\x00\x00\x16\x16\x16\x16\x16\x16\x9b\xd2'+paquetes_recibidos[(tam+2):(tam+2+tamaño_siguiente)])
+                            #yield paquetes_recuperados
+                            tam += tamaño_siguiente+2
+                            
+                        
+                    
+                #exit()
+                if pkt.haslayer(Dot11):
+                    radiotap = pkt.getlayer(RadioTap)
+                    if radiotap and hasattr(radiotap, 'rate'):
+                        rate = radiotap.rate / 2.0  # Scapy returns rate in 500 kbps units
+                        print(f"Tasa de transmisión: {rate} Mbps")
+                    else:
+                        print("Paquete capturado sin tasa de transmisión")
+                print("SALIMOS")
+                # Save the packets to a pcap file
+                packets = [Raw(load=byte_packet) for byte_packet in paquetes_recuperados]
+                for packet in packets:
+                    packet.time = tiempo_actual
+                print("paquetes guardados con tiempo ",tiempo_actual)    
+                scapy.wrpcap('/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/prueba3/paquetes_recuperados.pcap', packets, append=True)
+                #MSDU, lapso = AMPDU_dec(int.from_bytes(ver, byteorder='big'), key)
 
 # rate = sys.argv[1]
 # forma= sys.argv[2]
-
+scapy.wrpcap('/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/prueba3/paquetes_recuperados.pcap',[])
 scapy.sniff(iface=IFACE2, prn=PacketHandler, timeout=30000)
  
