@@ -43,6 +43,5 @@ def generateAndSaveKeys(num, lengths):
 num=3
 #tamaños de las claves
 lengths=[128,144,160,176,192,208,224,240,256,272,288,304,320,336,352,368,384,400,416,432,448,464,480,496,512]
-#lengths=[128]
 
 generateAndSaveKeys(num,lengths)     

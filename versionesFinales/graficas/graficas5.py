@@ -16,7 +16,7 @@ def leer_datos(archivo):
         
         for linea in file:
             if 'paquete numero' in linea:   
-                tiempo = float(re.search(r'Tiempo (\d+\.\d+)', linea).group(1))#leo tiempo paquete
+                tiempo = float(re.search(r'Tiempo (\d+\.\d+(?:e[+-]?\d+)?)', linea).group(1))#leo tiempo paquete
                 airtime = float(re.search(r'Taire (\d+\.\d+)', linea).group(1))#leo airtime paquete
                 if tiempo1==None:
                     tiempo1=tiempo
@@ -41,33 +41,38 @@ def leer_datos(archivo):
     
     return tiempos_lectura_paquetes,  retardos_paquetes, tiempos_lectura_paquetes_grandes,retardos_paquetes_grandes
 
-def graficar(tiempos_lectura_paquetes,retardos_paquetes,tiempos_lectura_paquetes_grandes,retardos_paquetes_grandes):
+def graficar(tiempos_lectura_paquetes,retardos_paquetes,tiempos_lectura_paquetes_grandes,retardos_paquetes_grandes,archivo):
     fig, ax = plt.subplots(figsize=(12, 6))
     
    
 
-    # Graficar Airtime de cada paquete como barras
-    ax.plot(tiempos_lectura_paquetes, retardos_paquetes, label='retardo de envio paquetes sin agrupar', color='red', marker ="o")
-    ax.plot(tiempos_lectura_paquetes_grandes, retardos_paquetes_grandes, label='retardo de envio paquetes grandes sin agrupar', color='blue', marker ="x")
+    # Graficar Airtime de cada paquete como puntos
+    ax.scatter(tiempos_lectura_paquetes, retardos_paquetes, label='retardo de envio paquetes sin agrupar', color='red', marker ="o")
+    ax.scatter(tiempos_lectura_paquetes_grandes, retardos_paquetes_grandes, label='retardo de envio paquetes grandes sin agrupar', color='blue', marker ="x")
    
-    ax.set_xlabel('Tiempos de lectura')
-    ax.set_ylabel('retardos de envio(tiempo de recepcion - tiempo de lectura)')
+    ax.set_xlabel('Tiempos de lectura (segundos)')
+    ax.set_ylabel('retardos de envio (segundos)')
     ax.set_title('retardos de envio paquetes sin agrupar')
     ax.legend()
 
     plt.tight_layout()
-    plt.show()
+  
 
     # Guardar la gráfica en un archivo
-    #plt.savefig('rayleigh_distribution_mean_0.0005.png')  # Puedes cambiar la extensión y el nombre del archivo
+    dir = "C:\\Users\\julia\\OneDrive - unizar.es\\Cuarto Teleco\\TFG\\MEMORIA\\graficas\\plots por separado\\" + archivo + "_sin_agrupar.jpg"
+    plt.savefig(dir)  # Puedes cambiar la extensión y el nombre del archivo
     #plt.close()  # Cierra la figura
+    plt.show()
     
-
-archivo = 'airtimenuevo.txt'  # Cambia esto por el nombre de tu archivo
-tiempos_lectura_paquetes, tiempos_recepcion_paquetes, tiempos_lectura_paquetes_grandes, retardos_paquetes_grandes = leer_datos(archivo)
+for i in range(1, 9):
+    archivo = 'airtime550_200_' + str(7+i)+'0'  # Cambia esto por el nombre de tu archivo
+    archivo = 'airtime_Captura'
+    print(archivo)
+    if archivo:
+        tiempos_lectura_paquetes, tiempos_recepcion_paquetes, tiempos_lectura_paquetes_grandes, retardos_paquetes_grandes = leer_datos(archivo+'.txt')
 
 # Comprobar si se han leído correctamente los datos
-if tiempos_lectura_paquetes and tiempos_recepcion_paquetes and tiempos_lectura_paquetes_grandes and retardos_paquetes_grandes:
-    graficar(tiempos_lectura_paquetes, tiempos_recepcion_paquetes,tiempos_lectura_paquetes_grandes,retardos_paquetes_grandes)
-else:
-    print("Error al leer los datos del archivo.")
+# if tiempos_lectura_paquetes and tiempos_recepcion_paquetes and tiempos_lectura_paquetes_grandes and retardos_paquetes_grandes:
+        graficar(tiempos_lectura_paquetes, tiempos_recepcion_paquetes,tiempos_lectura_paquetes_grandes,retardos_paquetes_grandes,archivo)
+# else:
+#     print("Error al leer los datos del archivo.")

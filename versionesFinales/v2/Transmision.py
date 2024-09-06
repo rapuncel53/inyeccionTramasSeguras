@@ -57,6 +57,7 @@ def PacketHandler(paquetes, ps, xs, Hdr):
     print("Enviando paquete en:", time.time())
     
     # Enviar el paquete
+    # Comentado para no enviar los paquetes (no necesario para la simulacion)
     scapy.sendp(packet, iface=IFACE, verbose=False)
 
 # Función para calcular el tiempo en el aire de un paquete
@@ -64,10 +65,11 @@ def calcular_tiempo_en_aire(tamano):
     TDataMac = (tamano + 36) * 8 / Rb
     return DIFS + Backoff_medio + TDataPreambulo + TDataMac + SIFS + TAckPreambulo + TAckMac
 
-# Función principal
+# Función principal  
 def main():
     dir = os.getcwd()
-    tipoPaquetes = "/datosPaquetes/50_200/datosPaquetes50_200_80.txt"
+    tipoPaquetes = "/datosPaquetes/550_200/datosPaquetes550_200_110.txt"
+    #tipoPaquetes = "/datosPaquetes/datosPaquetes.txt"
     eth_paquetes = leer_datos_paquetes(dir + tipoPaquetes)
     print("datosPaquetes :",tipoPaquetes)
     global ind
@@ -94,7 +96,8 @@ def main():
         ##print("Tamaño TOTAL:", Total)
         ind += 1
         ##print("Número de paquete:", ind)
-        PacketHandler(cif_paquetes[0], cif_paquetes[1], cif_paquetes[2], cif_paquetes[3])
+        #no enviar los paquetes para la simulacion
+        #PacketHandler(cif_paquetes[0], cif_paquetes[1], cif_paquetes[2], cif_paquetes[3])
 
 if __name__ == "__main__":
     main()

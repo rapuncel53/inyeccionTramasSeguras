@@ -1,11 +1,12 @@
 import numpy as np
 import random
 from scapy.all import rdpcap
-#quiero un import para leer pcaps
+
+captura = "/home/proyecto/Documentos/pruebaInyeccion/inyeccionTramasSeguras/versionesFinales/v2/generar txt paquetes/captura.pcapng"
 
 #funcion que lee un pcap y devuelve un fichero con el tiempo de llegada del paquete, su tamaño y una estacion destino aleatoria
 def read_pcap_file(file_path):
-    output_file = open("datosPaquetes.txt", "w")
+    output_file = open("datosPaqueteseeeeee.txt", "w")
     packets = rdpcap(file_path)
     ta=0
     
@@ -17,5 +18,6 @@ def read_pcap_file(file_path):
         output_file.write(f"{timestamp} {size} {destination}\n")
 
     output_file.close()
-    
-read_pcap_file("captura.pcapng")
+
+#introducir la ruta del fichero pcap  
+read_pcap_file(captura)

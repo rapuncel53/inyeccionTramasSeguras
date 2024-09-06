@@ -123,45 +123,71 @@ def leer_datos_sin_agrupar(archivo):
 def graficar(tiempos_lectura_paquetes,retardos_paquetes,tiempos_lectura_paquetes_grandes,retardos_paquetes_grandes,tiempos_lectura_paquetes_agrupables_y_solitarios,  retardos_agrupacion_y_solitarios, tiempos_lectura_solitarios,retardos_solitarios):
     fig, ax = plt.subplots(figsize=(12, 6))
     
-    #calcular retardos paquetes 
-    media_retardos = []
-    tiempos_media_retardos = []
+    #calcular  media y desviacion retardos paquetes sin agrupar
+    media_retardos_sin_agrupar = []
+    tiempos_media_retardos_sin_agrupar = []
     suma_retardos = 0
     x=0
     numero_ultimo_paquete=0
-    desviacion_estandar=[]
+    desviacion_estandar_sin_agrupar=[]
     for i in range(len(retardos_paquetes)):
         
         if(tiempos_lectura_paquetes[i] < x+1):
             suma_retardos += retardos_paquetes[i]
         else:
-            media_retardos.append(suma_retardos/len(retardos_paquetes[numero_ultimo_paquete:i]))
-            desviacion_estandar.append(np.std(retardos_paquetes[numero_ultimo_paquete:i]))
+            media_retardos_sin_agrupar.append(suma_retardos/len(retardos_paquetes[numero_ultimo_paquete:i]))
+            desviacion_estandar_sin_agrupar.append(np.std(retardos_paquetes[numero_ultimo_paquete:i]))
             numero_ultimo_paquete=i
-            tiempos_media_retardos.append(x+1)
+            tiempos_media_retardos_sin_agrupar.append(x+0.5)
             suma_retardos = retardos_paquetes[i]
             x += 1
 
-    ax.plot(tiempos_media_retardos, media_retardos, color='yellow', label='media retardos paquetes', marker='o')
+    #ax.plot(tiempos_media_retardos, media_retardos, color='green', label='media retardos agrupables y solitarios (envio sin agrupar)', marker='o')
     
-    
-    
-    
-    ax.errorbar(tiempos_media_retardos, media_retardos, yerr=desviacion_estandar, fmt='o', label='Tamaño de Paquete', ecolor='r', capsize=5)
 
+    #calcular  media y desviacion retardos paquetes agrupando
+    media_retardos_agrupando = []
+    tiempos_media_retardos_agrupando = []
+    suma_retardos = 0
+    x=0
+    numero_ultimo_paquete=0
+    desviacion_estandar_agrupando=[]
+    for i in range(len(retardos_agrupacion_y_solitarios)):
+        
+        if(tiempos_lectura_paquetes_agrupables_y_solitarios[i] < x+1):
+            suma_retardos += retardos_agrupacion_y_solitarios[i]
+        else:
+            media_retardos_agrupando.append(suma_retardos/len(retardos_agrupacion_y_solitarios[numero_ultimo_paquete:i]))
+            desviacion_estandar_agrupando.append(np.std(retardos_agrupacion_y_solitarios[numero_ultimo_paquete:i]))
+            numero_ultimo_paquete=i
+            tiempos_media_retardos_agrupando.append(x+0.5)
+            suma_retardos = retardos_agrupacion_y_solitarios[i]
+            x += 1
+    
+    
+    
 
 
 
     
 
     # Graficar Airtime de cada paquete como barras
-    ax.plot(tiempos_lectura_paquetes, retardos_paquetes, label='retardo de envio paquetes sin agrupar', color='green', marker ="o")
-    ax.plot(tiempos_lectura_paquetes_grandes, retardos_paquetes_grandes, label='retardo de envio paquetes grandes sin agrupar', color='blue', marker ="x")
-    ax.plot(tiempos_lectura_paquetes_agrupables_y_solitarios, retardos_agrupacion_y_solitarios, label='retardo de envio paquetes agrupando', color='orange', marker ="o")
-    ax.plot(tiempos_lectura_solitarios, retardos_solitarios, label='retardo de envio paquetes grandes ', color='green', marker ="x")
-   
-    ax.set_xlabel('Tiempos de lectura')
-    ax.set_ylabel('retardos de envio(tiempo de recepcion - tiempo de lectura)')
+    if retardos_paquetes:
+        ax.plot(tiempos_lectura_paquetes, retardos_paquetes, label='retardo de envio paquetes (envio sin agrupar)', color='yellow', marker ="o")
+    if retardos_paquetes_grandes:
+        ax.plot(tiempos_lectura_paquetes_grandes, retardos_paquetes_grandes, label='retardo de envio paquetes grandes (envio sin agrupar)', color='blue', marker ="x")
+    if retardos_agrupacion_y_solitarios:
+        ax.plot(tiempos_lectura_paquetes_agrupables_y_solitarios, retardos_agrupacion_y_solitarios, label='retardo de envio paquetes (envio agrupando)', color='orange', marker ="o")
+    if retardos_solitarios:
+        ax.plot(tiempos_lectura_solitarios, retardos_solitarios, label='retardo de envio paquetes grandes (envio agrupando) ', color='green', marker ="x")
+    
+
+    #ax.errorbar(tiempos_media_retardos_sin_agrupar, media_retardos_sin_agrupar, yerr=desviacion_estandar_sin_agrupar, fmt='o', label='desviacion estandar retardos agrupables y solitarios (envio sin agrupar)', ecolor='r', capsize=5)
+    #ax.errorbar(tiempos_media_retardos_agrupando, media_retardos_agrupando, yerr=desviacion_estandar_agrupando, fmt='o', label='desviacion estandar retardos agrupables y solitarios (envio agrupando)', ecolor='b', capsize=5)
+
+
+    ax.set_xlabel('Tiempos de lectura (segundos)')
+    ax.set_ylabel('retardos de envio (segundos)')
     ax.set_title('retardos de envio paquetes ')
     ax.legend()
 
@@ -172,8 +198,9 @@ def graficar(tiempos_lectura_paquetes,retardos_paquetes,tiempos_lectura_paquetes
     #plt.savefig('rayleigh_distribution_mean_0.0005.png')  # Puedes cambiar la extensión y el nombre del archivo
     #plt.close()  # Cierra la figura
     
-
-archivo = 'airtime350_200_110.txt'  # Cambia esto por el nombre de tu archivo
+###################################################################################
+archivo = 'airtime_Captura'  # Cambia esto por el nombre de tu archivo
+###################################################################################
 tiempos_lectura_paquetes,  retardos_paquetes, tiempos_lectura_paquetes_grandes,retardos_paquetes_grandes = leer_datos_sin_agrupar(archivo)
 tiempos_lectura_paquetes_agrupables_y_solitarios,  retardos_agrupacion_y_solitarios, tiempos_lectura_solitarios,retardos_solitarios = leer_datos_agrupacion(archivo)
 

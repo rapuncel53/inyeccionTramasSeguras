@@ -84,10 +84,10 @@ def leer_datos_paquetes(nombre_archivo):
                     tamaño_total = sum(tamaño_destinos.values())
                     margen_tiempo = 0.1
                     # Condición para agrupar y devolver los paquetes leídos # 1448 pero no se porque desborda a veces aun siendo menor a 1500
-                    if max(tamaño_destinos.values()) > 640 or tamaño_total > 1364 or (tiempo-tiempo1) - (tiempoPaquete1-tiempo1) > margen_tiempo:
+                    if max(tamaño_destinos.values()) > 640 or tamaño_total > 1200 or (tiempo-tiempo1) - (tiempoPaquete1-tiempo1) > margen_tiempo:
 
                         #hay que esperar para enviarlo? 
-                        if (tiempo-tiempo1) - (tiempoPaquete1-tiempo1) > 1:
+                        if (tiempo-tiempo1) - (tiempoPaquete1-tiempo1) > margen_tiempo:
                             esperar_envio= 1
                         tamaño_destinos[destino] -= (tamano + 2)
 
@@ -148,7 +148,8 @@ def leer_datos_paquetes(nombre_archivo):
                     Dot11(type=2, subtype=8, addr1=AP_MAC_2, addr2=AP_MAC) / 
                     qoscontrol / datos)
                     # Enviar el paquete
-                    scapy.sendp(packet, iface=IFACE, verbose=False)
+                    # Comentar la siguiente línea para no enviar los paquetes (no necesario para la simulación)
+                    #scapy.sendp(packet, iface=IFACE, verbose=False)
                     
             # Devolver los paquetes restantes si quedan
             if paquetes_leidos:

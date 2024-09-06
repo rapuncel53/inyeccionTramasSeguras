@@ -17287,10 +17287,4 @@ Tiempo total en el aire de los paquetes por separado = 0.0018316363636363634 ,ti
 Tiempo en el aire de la agrupación (calculado con función): 0.001242
 paquete numero 10012 Destino 3 Taire 0.0009954545454545455 Tamaño 546 Tiempo 9.997318
 paquete individual numero 10013 Destino 3 Taire 0.0010601818181818182 Tamaño 635 Tiempo 9.99857
-paquete numero 10014 Destino 1 Taire 0.0008558181818181817 Tamaño 354 Tiempo 9.998658
-paquete numero 10015 Destino 2 Taire 0.0009009090909090908 Tamaño 416 Tiempo 9.999426
-Tiempo total en el aire de los paquetes por separado = 0.0027521818181818177 ,tiempo de envio agrupacion 10.000469
-Tiempo en el aire de la agrupación (calculado con función): 0.0015685454545454546
-paquete numero 10016 Destino 1 Taire 0.0009292727272727273 Tamaño 455 Tiempo 10.000469
-Tiempo total en el aire de los paquetes por separado = 0.0009292727272727273 ,tiempo de envio agrupacion 10.000469
-Tiempo en el aire de la agrupación (calculado con función): 0.0009336363636363636
+

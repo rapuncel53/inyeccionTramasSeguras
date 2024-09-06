@@ -78,8 +78,19 @@ def generar_fichero(longitud_media, desviacion_maxima, tiempo, tasa, tipo_norma,
     
     
 
-generar_fichero(50, 200, 10, 11, 'b', 80)   
-generar_fichero(50, 200, 10, 11, 'b', 90)
-generar_fichero(50, 200, 10, 11, 'b', 100)
-generar_fichero(50, 200, 10, 11, 'b', 110) 
+generar_fichero(350, 200, 10, 11, 'b', 80)   
+generar_fichero(350, 200, 10, 11, 'b', 90)
+generar_fichero(350, 200, 10, 11, 'b', 100)
+generar_fichero(350, 200, 10, 11, 'b', 110) 
+generar_fichero(350, 200, 10, 11, 'b', 120) 
+generar_fichero(350, 200, 10, 11, 'b', 130) 
+generar_fichero(350, 200, 10, 11, 'b', 140) 
+generar_fichero(350, 200, 10, 11, 'b', 150) 
+generar_fichero(350, 200, 10, 11, 'b', 200) 
+generar_fichero(350, 200, 10, 11, 'b', 250) 
+generar_fichero(350, 200, 10, 11, 'b', 300) 
+generar_fichero(350, 200, 10, 11, 'b', 350) 
+generar_fichero(350, 200, 10, 11, 'b', 400) 
+
+
     
